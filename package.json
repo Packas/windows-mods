@@ -1,0 +1,42 @@
+{
+  "name": "windows-mods",
+  "version": "1.0.3",
+  "description": "Onscreen GUI Overlay",
+  "main": "index.js",
+  "scripts": {
+    "build": "electron-builder --win -p always",
+    "start": "electron ."
+  },
+  "keywords": [
+    "CPU",
+    "RAM"
+  ],
+  "author": "Packas Only",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.2.1",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.5",
+    "os-utils": "0.0.14"
+  },
+  "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Packas",
+        "repo": "windows-mods",
+        "token": "TOCKEN HERE"
+      }
+    ],
+    "appId": "windows-mods",
+    "mac": {
+      "category": "windows.mods.html.js",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    }
+  }
+}
